@@ -4612,6 +4612,7 @@ class VCDMigrationValidation:
                                 vcdConstants.VDC_COMPUTE_POLICIES)
             # get api call to retrieve org vdc compute policies
             response = self.restClientObj.get(url, self.headers)
+            resultTotal = 0
             if response.status_code == requests.codes.ok:
                 logger.debug("Retrieved Org VDC Compute Policies details successfully")
                 # returning the list of org vdc compute policies
