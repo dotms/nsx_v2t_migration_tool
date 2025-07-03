@@ -1678,6 +1678,11 @@ class VCDMigrationValidation:
 
                 if response.status_code == requests.codes.ok:
                     responseDict = response.json()
+
+                    # If there are no existing matching external networks we can skip.
+                    if len(responseDict.get("values")) == 0:
+                        continue
+
                     extNet = responseDict.get("values")[0]
                     # Finding segment backed ext net for shared direct network
                     if [backing for backing in extNet['networkBackings']['values'] if
