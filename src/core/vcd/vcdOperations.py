@@ -2267,7 +2267,7 @@ class VCloudDirectorOperations(ConfigureEdgeGatewayServices):
         try:
             logger.debug("Getting the VM Sizing Policy of Org VDC {}".format(orgVdcId))
             # url to retrieve the vm sizing policy details of the vm
-            url = "{}{}".format(vcdConstants.OPEN_API_URL.format(self.ipAddress),
+            url = "{}{}".format(vcdConstants.OPEN_API_URL_2.format(self.ipAddress),
                                 vcdConstants.ORG_VDC_VM_SIZING_POLICY.format(orgVdcId))
             # get api call to retrieve the vm sizing policy of the vm
             response = self.restClientObj.get(url, headers=self.headers)

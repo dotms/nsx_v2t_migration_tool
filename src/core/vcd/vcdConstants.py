@@ -62,6 +62,9 @@ CREATE_METADATA_IN_ORG_VDC_TASK_NAME = 'metadataUpdate'
 # vcd open api url
 OPEN_API_URL = "https://{}/cloudapi/1.0.0/"
 
+# vcd open api url
+OPEN_API_URL_2 = "https://{}/cloudapi/2.0.0/"
+
 # current session uri
 CURRENT_SESSION = 'sessions/current'
 
